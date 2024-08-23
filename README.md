@@ -37,7 +37,7 @@ This is a simple news website built with [Svelte](https://svelte.dev/) that fetc
 
 ## Setup
 1. Clone The Repository
-   git clone https://github.com/yourusername/news-website.git
+   git clone https://github.com/CsBatch/my-svelte-project.git
    cd news-website
 
 3. Install Dependencies
