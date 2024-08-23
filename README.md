@@ -2,7 +2,7 @@
 
 This is a simple news website built with [Svelte](https://svelte.dev/) that fetches and displays news articles using the [NewsAPI](https://newsapi.org/). The site allows users to filter news by categories like Science, Business, Technology, and Health.
 
-## Table of Contents ![ToDoListCheckListGIF (2)](https://github.com/user-attachments/assets/3830857e-4158-410c-aaf7-97dc72b2af3d) 
+## Table of Contents 📃
 
 - [Features](#features)
 - [Project Structure](#project-structure)
@@ -10,12 +10,12 @@ This is a simple news website built with [Svelte](https://svelte.dev/) that fetc
 - [Usage](#usage)
 - [Contributing](#contributing)
 
-## Features
+## Features 👩‍💻
 - **Category-based filtering**: Users can filter news articles by selecting categories such as Science, Business, Technology, and Health.
 - **Responsive Design**: The site is responsive and works well on both desktop and mobile devices.
 - **API Integration**: Fetches real-time news articles using the NewsAPI.
 
-## Project Structure
+## Project Structure 🔗
 
 ```bash
 /news-website
@@ -36,7 +36,7 @@ This is a simple news website built with [Svelte](https://svelte.dev/) that fetc
 |-- README.md                    # This readme file
 ```
 
-## Setup
+## Setup ⚙️
 1. Clone The Repository
    git clone https://github.com/CsBatch/my-svelte-project.git
    cd news-website
@@ -51,11 +51,11 @@ This is a simple news website built with [Svelte](https://svelte.dev/) that fetc
    npm run dev
 
 
-## Usage
+## Usage 🎯
 Navigation: Use the navigation bar to filter news articles by categories such as Science, Business, Technology, and Health.
 Reading Articles: Click on a news headline to read the full article on the original news source.
 
-## Contributions
+## Contributions 🤝
 Contributions are welcome! If you have any suggestions or improvements, feel free to create an issue or submit a pull request.
 
 Steps to Contribute
