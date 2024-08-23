@@ -4,12 +4,18 @@
 
   export let onSelectCategory;
 
-  const categories = ["Top-headlines", "Science", "Sports", "Business", "Technology", "Health"];
+  const categories = [
+    "Top-headlines",
+    "Science",
+    "Sports",
+    "Business",
+    "Technology",
+    "Health",
+  ];
 
   function handleCategoryClick(category) {
     onSelectCategory(category);
   }
-  
 </script>
 
 <div class="navbar">
@@ -18,26 +24,21 @@
       <img src={logo} alt="SvelteKit" />
     </a>
   </div>
+
   <nav>
-    <svg viewBox="0 0 2 3" aria-hidden="true">
-      <path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
-    </svg>
     <ul>
       {#each categories as category}
-      <li>
-        <a href="#{category}" on:click={() => handleCategoryClick(category)}>
-          {category}
-        </a>
-      </li>
+        <li>
+          <a href="#{category}" on:click={() => handleCategoryClick(category)}>
+            {category}
+          </a>
+        </li>
       {/each}
     </ul>
-    <svg viewBox="0 0 2 3" aria-hidden="true">
-      <path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" />
-    </svg>
   </nav>
 
   <div class="corner">
-    <a href="https://github.com/sveltejs/kit">
+    <a href="https://github.com/CsBatch" class="github">
       <img src={github} alt="GitHub" />
     </a>
   </div>
@@ -46,12 +47,15 @@
 <style>
   .navbar {
     display: flex;
+    position: fixed;
+    width: 100vw;
     justify-content: space-between;
+    z-index: 1000;
   }
 
   .corner {
-    width: 3em;
-    height: 3em;
+    width: 5em;
+    height: 5em;
   }
 
   .corner a {
@@ -63,9 +67,12 @@
   }
 
   .corner img {
-    width: 2em;
-    height: 2em;
+    width: 3em;
+    height: 3em;
     object-fit: contain;
+  }
+  .corner .github img {
+    filter: brightness(10%) saturate(100%) invert(60%) sepia(91%) saturate(7441%) hue-rotate(0deg) brightness(104%) contrast(101%);
   }
 
   li {
@@ -74,23 +81,19 @@
   }
 
   nav {
-    color: white;
+    color: rgb(255, 120, 10);
+    text-shadow: 0px 0px 5px black;
     display: flex;
     justify-content: center;
-    --background: rgba(0, 0, 0, 0.7);
+    border-radius: 16px;
+    background-color: rgba(19, 19, 19, 0.827);
+        box-shadow: inset 0 1px 20px -5px rgba(250, 214, 129, 0.499);
+    backdrop-filter: blur(2.7px);
+    -webkit-backdrop-filter: blur(2.7px);
+    /* border: 1px solid rgb(255, 255, 255); */
   }
 
-  svg {
-    width: 2em;
-    height: 3em;
-    display: block;
-  }
-
-  path {
-    fill: var(--background);
-  }
-
-  ul{
+  ul {
     position: relative;
     padding: 0;
     margin: 0;
@@ -102,22 +105,58 @@
     background: var(--background);
     background-size: contain;
   }
+  ul li{
+    display: flex;
+  }
 
-  ul a{
+  ul a {
     display: flex;
     height: 100%;
     align-items: center;
     padding: 0 0.5rem;
     color: var(--color-text);
-    font-weight: 700;
-    font-size: 0.8rem;
+    font-weight: 600;
+    font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     text-decoration: none;
     transition: color 0.2s linear;
+    flex: 1;
   }
 
   a:hover {
-    color: var(--color-theme-1);
+    color: rgb(255, 255, 255);
+  }
+
+  @media (max-width: 955px) {
+
+    .navbar{
+      padding-top: 10px;
+    }
+    .corner img {
+    width: 10em;
+    height: 10em;
+    object-fit: contain;
+  }
+    nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      justify-content: space-between;
+      gap: 0;
+      padding: 5px;
+      overflow-x: scroll;
+    }
+
+    a {
+      font-size: 0.2rem;
+      padding: 8px 10px;
+    }
+
+    .corner {
+      width: 3em;
+      height: 1em;
+    }
   }
 </style>

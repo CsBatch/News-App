@@ -1,5 +1,5 @@
 <script>
-  import NewsColumn from "./NewsColumn.svelte";
+  import NewsCard from "./NewsCard.svelte";
   export let articles = [];
 </script>
 
@@ -8,8 +8,8 @@
     {#if articles.length > 0}
       {#each articles as article}
         {#if article.title}
-          <div class="newsItem col-lg-4 col-md-4">
-            <NewsColumn
+          <div class="newsItem col-lg-3 col-md-6">
+            <NewsCard
               newsUrl={article.url}
               title={article.title}
               urlToImage={article.urlToImage

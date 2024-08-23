@@ -20,10 +20,17 @@
     fetchNews(category);
   });
 </script>
-
-<Navbar onSelectCategory={handleCategorySelection} />
-<NewsList {articles} />
+<header>
+  <Navbar onSelectCategory={handleCategorySelection} />
+</header>
+<main>
+  <h1>--&gt{category.toUpperCase()}&lt--</h1>
+  <NewsList {articles} />
+</main>
 
 <style>
   /* Global styles can go here */
+  h1{
+    color: rgb(255, 131, 86);
+  }
 </style>
