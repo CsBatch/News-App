@@ -1,8 +1,9 @@
-# my-svelte-project :-> News WebSite
+![ToDoListCheckListGIF](https://github.com/user-attachments/assets/e3f4a956-11ff-4815-a900-cc2caaeca7dc)# my-svelte-project :-> News WebSite 📰
 
 This is a simple news website built with [Svelte](https://svelte.dev/) that fetches and displays news articles using the [NewsAPI](https://newsapi.org/). The site allows users to filter news by categories like Science, Business, Technology, and Health.
 
-## Table of Contents
+## Table of Contents ![ToDoListCheckListGIF (2)](https://github.com/user-attachments/assets/3830857e-4158-410c-aaf7-97dc72b2af3d) 
+
 - [Features](#features)
 - [Project Structure](#project-structure)
 - [Setup](#setup)
