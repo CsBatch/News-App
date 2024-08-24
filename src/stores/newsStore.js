@@ -7,9 +7,8 @@ export const newsStore = writable({
 
 let url="";
 export function fetchNews(category) {
-  const apiKey = import.meta.env.VITE_NEWSAPI_KEY;
 
-  url = `https://newsapi.org/v2/everything?q=${category.toLowerCase()}&apiKey=${apiKey}`;
+  url = `https://newsapi.org/v2/everything?q=${category.toLowerCase()}&apiKey=f32b03f1da254704ae9c19d921bbfb72`;
   fetch(url)
     .then(response => response.json())
     .then(data => {
